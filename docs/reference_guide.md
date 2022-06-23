@@ -1255,7 +1255,7 @@ snmpd /proc/net/dev
 The available members for each tracepoint can be listed from their /format file in /sys. For example:
 
 ```
-# cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_open/format
+# cat /sys/kernel/tracing/events/syscalls/sys_enter_open/format
 name: sys_enter_openat
 ID: 608
 format:

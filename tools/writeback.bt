@@ -25,7 +25,7 @@ BEGIN
 	printf("%-9s %-8s %-8s %-16s %s\n", "TIME", "DEVICE", "PAGES",
 	    "REASON", "ms");
 
-	// see /sys/kernel/debug/tracing/events/writeback/writeback_start/format
+	// see /sys/kernel/tracing/events/writeback/writeback_start/format
 	@reason[0] = "background";
 	@reason[1] = "vmscan";
 	@reason[2] = "sync";

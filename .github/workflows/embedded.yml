@@ -84,7 +84,7 @@ jobs:
         docker run --privileged
         -v $(pwd):$(pwd)
         -w $(pwd)
-        -v /sys/kernel/debug:/sys/kernel/debug:rw
+        -v /sys/kernel:/sys/kernel:rw
         -v /lib/modules:/lib/modules:ro
         -v /usr/src:/usr/src:ro
         -e LLVM_VERSION=${LLVM_VERSION}

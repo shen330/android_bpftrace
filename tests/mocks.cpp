@@ -12,7 +12,7 @@ void setup_mock_probe_matcher(MockProbeMatcher &matcher)
 {
   ON_CALL(matcher,
           get_symbols_from_file(
-              "/sys/kernel/debug/tracing/available_filter_functions"))
+              "/sys/kernel/tracing/available_filter_functions"))
       .WillByDefault([](const std::string &) {
         std::string ksyms = "SyS_read\n"
                             "sys_read\n"
@@ -25,7 +25,7 @@ void setup_mock_probe_matcher(MockProbeMatcher &matcher)
       });
 
   ON_CALL(matcher,
-          get_symbols_from_file("/sys/kernel/debug/tracing/available_events"))
+          get_symbols_from_file("/sys/kernel/tracing/available_events"))
       .WillByDefault([](const std::string &) {
         std::string tracepoints = "sched:sched_one\n"
                                   "sched:sched_two\n"

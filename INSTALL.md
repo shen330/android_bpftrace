@@ -137,7 +137,7 @@ This allows for such an invocation of bpftrace:
 ```
 $ docker run -ti -v /usr/src:/usr/src:ro \
        -v /lib/modules/:/lib/modules:ro \
-       -v /sys/kernel/debug/:/sys/kernel/debug:rw \
+       -v /sys/kernel/:/sys/kernel:rw \
        --net=host --pid=host --privileged \
        quay.io/iovisor/bpftrace:latest \
        tcplife.bt
